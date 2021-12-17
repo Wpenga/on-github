@@ -1,6 +1,13 @@
 name: Wayback On GitHub
 
 on:
+  push:
+      branches:
+        - "**"
+  pull_request:
+      branches: [ main ]
+      types: [ opened, synchronize, reopened ]
+
   schedule:
     - cron: '0 */6 * * *'
 
@@ -14,5 +21,5 @@ jobs:
       uses: wabarc/on-github@v0.0.1
       env:
         WAYBACK_TELEGRAM_TOKEN: ${{ secrets.WAYBACK_TELEGRAM_TOKEN }}
-         WAYBACK_DAEMON:'telegram'
+        WAYBACK_DAEMON:'telegram'
         WAYBACK_TO: 'ip,ph'
