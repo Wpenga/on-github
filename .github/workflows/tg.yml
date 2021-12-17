@@ -22,5 +22,5 @@ jobs:
       env:
         WAYBACK_TELEGRAM_TOKEN: ${{ secrets.WAYBACK_TELEGRAM_TOKEN }}
 
-        WAYBACK_DAEMON:'telegram'
+      
         WAYBACK_TO: 'ip,ph'
