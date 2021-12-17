@@ -1,0 +1,16 @@
+name: Wayback On GitHub
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  wayback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    continue-on-error: true
+    steps:
+    - name: Run wayback service
+      uses: wabarc/on-github@v0.0.1
+      env:
+        WAYBACK_TELEGRAM_TOKEN: ${{ secrets.WAYBACK_TELEGRAM_TOKEN }}
