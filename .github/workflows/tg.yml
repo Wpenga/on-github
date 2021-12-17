@@ -21,5 +21,6 @@ jobs:
       uses: wabarc/on-github@v0.0.1
       env:
         WAYBACK_TELEGRAM_TOKEN: ${{ secrets.WAYBACK_TELEGRAM_TOKEN }}
+
         WAYBACK_DAEMON:'telegram'
         WAYBACK_TO: 'ip,ph'
